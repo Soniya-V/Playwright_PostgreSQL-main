@@ -1,0 +1,194 @@
+{
+  "config": {
+    "configFile": "D:\\Playwright_PostgreSQL-main\\Playwright_PostgreSQL-main\\playwright.config.ts",
+    "rootDir": "D:/Playwright_PostgreSQL-main/Playwright_PostgreSQL-main",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "jsonReports/jsonReport.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "always"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/Playwright_PostgreSQL-main/Playwright_PostgreSQL-main/test-results",
+        "repeatEach": 1,
+        "retries": 3,
+        "id": "Firefox",
+        "name": "Firefox",
+        "testDir": "D:/Playwright_PostgreSQL-main/Playwright_PostgreSQL-main",
+        "testIgnore": [],
+        "testMatch": [
+          "tests/example.test.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.41.0",
+    "workers": 8,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "tests\\example.test.ts",
+      "file": "tests/example.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Test Case 01: Validate select query from DB",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Firefox",
+              "projectName": "Firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 28,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "=========== Tests started ===========\n"
+                    },
+                    {
+                      "text": "[\n  { brand: \u001b[32m'Ford'\u001b[39m, model: \u001b[32m'Mustang'\u001b[39m, year: \u001b[33m1964\u001b[39m },\n  { brand: \u001b[32m'xyz'\u001b[39m, model: \u001b[32m'abc'\u001b[39m, year: \u001b[33m2020\u001b[39m }\n]\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "Error writing data to JSON file: ENOENT: no such file or directory, open '*/test-results/data.json'\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2024-01-30T08:06:10.489Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ef45e6fd775f0ee539-ff04e9e3cee7a65fa967",
+          "file": "tests/example.test.ts",
+          "line": 36,
+          "column": 5
+        },
+        {
+          "title": "Test Case 08: Schema Testing for the Column ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Firefox",
+              "projectName": "Firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 52,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ { numberofcolumns: \u001b[32m'3'\u001b[39m } ]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-30T08:06:10.585Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ef45e6fd775f0ee539-1c1c6a63814c7c3e8b4f",
+          "file": "tests/example.test.ts",
+          "line": 171,
+          "column": 5
+        },
+        {
+          "title": "Test Case 08: Schema Testing for for the Column_name ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Firefox",
+              "projectName": "Firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 10,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[\n  { column_name: \u001b[32m'year'\u001b[39m },\n  { column_name: \u001b[32m'brand'\u001b[39m },\n  { column_name: \u001b[32m'model'\u001b[39m }\n]\n"
+                    },
+                    {
+                      "text": "=========== Tests stoped ===========\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-30T08:06:10.638Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ef45e6fd775f0ee539-dd63688680b47b53efb8",
+          "file": "tests/example.test.ts",
+          "line": 184,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-01-30T08:06:09.701Z",
+    "duration": 986.289,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
