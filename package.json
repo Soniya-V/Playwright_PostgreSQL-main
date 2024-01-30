@@ -10,12 +10,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.41.0",
+    "@playwright/test": "^1.41.1",
     "@types/node": "^20.11.10"
   },
   "dependencies": {
     "dotenv-extended": "^2.9.0",
+    "log4js": "^6.9.1",
     "mssql": "^10.0.2",
+    "ngx-logger": "^5.0.12",
     "pg": "^8.11.3"
   },
   "directories": {

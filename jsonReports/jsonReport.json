@@ -50,14 +50,14 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "version": "1.41.0",
+    "version": "1.41.1",
     "workers": 8,
     "webServer": null
   },
   "suites": [
     {
-      "title": "tests\\example.test.ts",
-      "file": "tests/example.test.ts",
+      "title": "src\\tests\\example.test.ts",
+      "file": "src/tests/example.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
@@ -76,7 +76,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 28,
+                  "duration": 20,
                   "errors": [],
                   "stdout": [
                     {
@@ -88,20 +88,20 @@
                   ],
                   "stderr": [
                     {
-                      "text": "Error writing data to JSON file: ENOENT: no such file or directory, open '*/test-results/data.json'\n"
+                      "text": "[Error: ENOENT: no such file or directory, open 'D:\\Playwright_PostgreSQL-main\\Playwright_PostgreSQL-main\\src\\resources\\data\\overallData.json'] {\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  syscall: \u001b[32m'open'\u001b[39m,\n  path: \u001b[32m'D:\\\\Playwright_PostgreSQL-main\\\\Playwright_PostgreSQL-main\\\\src\\\\resources\\\\data\\\\overallData.json'\u001b[39m\n}\n"
                     }
                   ],
                   "retry": 0,
-                  "startTime": "2024-01-30T08:06:10.489Z",
+                  "startTime": "2024-01-30T10:39:53.134Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "a6ef45e6fd775f0ee539-ff04e9e3cee7a65fa967",
-          "file": "tests/example.test.ts",
-          "line": 36,
+          "id": "1592776949fb2fc4a7c7-745ef065039d26d7d744",
+          "file": "src/tests/example.test.ts",
+          "line": 48,
           "column": 5
         },
         {
@@ -119,7 +119,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 52,
+                  "duration": 28,
                   "errors": [],
                   "stdout": [
                     {
@@ -128,16 +128,16 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-01-30T08:06:10.585Z",
+                  "startTime": "2024-01-30T10:39:53.219Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "a6ef45e6fd775f0ee539-1c1c6a63814c7c3e8b4f",
-          "file": "tests/example.test.ts",
-          "line": 171,
+          "id": "1592776949fb2fc4a7c7-4edaf5de742bdbca050b",
+          "file": "src/tests/example.test.ts",
+          "line": 174,
           "column": 5
         },
         {
@@ -155,7 +155,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 10,
+                  "duration": 7,
                   "errors": [],
                   "stdout": [
                     {
@@ -167,16 +167,16 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-01-30T08:06:10.638Z",
+                  "startTime": "2024-01-30T10:39:53.248Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "a6ef45e6fd775f0ee539-dd63688680b47b53efb8",
-          "file": "tests/example.test.ts",
-          "line": 184,
+          "id": "1592776949fb2fc4a7c7-d1dc770c3a5e7b58bbd9",
+          "file": "src/tests/example.test.ts",
+          "line": 187,
           "column": 5
         }
       ]
@@ -184,8 +184,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-01-30T08:06:09.701Z",
-    "duration": 986.289,
+    "startTime": "2024-01-30T10:39:52.377Z",
+    "duration": 906.9200000000001,
     "expected": 3,
     "skipped": 0,
     "unexpected": 0,
