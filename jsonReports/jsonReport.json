@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -76,7 +76,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 20,
+                  "duration": 24,
                   "errors": [],
                   "stdout": [
                     {
@@ -88,11 +88,11 @@
                   ],
                   "stderr": [
                     {
-                      "text": "[Error: ENOENT: no such file or directory, open 'D:\\Playwright_PostgreSQL-main\\Playwright_PostgreSQL-main\\src\\resources\\data\\overallData.json'] {\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  syscall: \u001b[32m'open'\u001b[39m,\n  path: \u001b[32m'D:\\\\Playwright_PostgreSQL-main\\\\Playwright_PostgreSQL-main\\\\src\\\\resources\\\\data\\\\overallData.json'\u001b[39m\n}\n"
+                      "text": "Failed to write file: Error: ENOENT: no such file or directory, open 'D:\\Playwright_PostgreSQL-main\\Playwright_PostgreSQL-main\\src\\resources\\data\\tempFiles\\overallData.json'\n"
                     }
                   ],
                   "retry": 0,
-                  "startTime": "2024-01-30T10:39:53.134Z",
+                  "startTime": "2024-02-02T09:11:03.622Z",
                   "attachments": []
                 }
               ],
@@ -102,6 +102,240 @@
           "id": "1592776949fb2fc4a7c7-745ef065039d26d7d744",
           "file": "src/tests/example.test.ts",
           "line": 48,
+          "column": 5
+        },
+        {
+          "title": "Test Case 08: Schema Testing for Number of Column ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Firefox",
+              "projectName": "Firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 44,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ { numberofcolumns: \u001b[32m'3'\u001b[39m } ]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-02-02T09:11:03.781Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1592776949fb2fc4a7c7-28b7f0546aa3d96fbfc7",
+          "file": "src/tests/example.test.ts",
+          "line": 165,
+          "column": 5
+        },
+        {
+          "title": "Test Case 09: Schema Testing for the Column_name ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Firefox",
+              "projectName": "Firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 18,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[\n  { column_name: \u001b[32m'year'\u001b[39m },\n  { column_name: \u001b[32m'brand'\u001b[39m },\n  { column_name: \u001b[32m'model'\u001b[39m }\n]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-02-02T09:11:03.827Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1592776949fb2fc4a7c7-d851013d7dba72820577",
+          "file": "src/tests/example.test.ts",
+          "line": 180,
+          "column": 5
+        },
+        {
+          "title": "Test Case 10: Schema Testing for the Column_name with data type ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Firefox",
+              "projectName": "Firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 21,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[\n  { column_name: \u001b[32m'year'\u001b[39m, data_type: \u001b[32m'integer'\u001b[39m },\n  { column_name: \u001b[32m'brand'\u001b[39m, data_type: \u001b[32m'character varying'\u001b[39m },\n  { column_name: \u001b[32m'model'\u001b[39m, data_type: \u001b[32m'character varying'\u001b[39m }\n]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-02-02T09:11:03.846Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1592776949fb2fc4a7c7-ae0697165d84562093ba",
+          "file": "src/tests/example.test.ts",
+          "line": 195,
+          "column": 5
+        },
+        {
+          "title": "Test Case 11: Schema Testing to check null field ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Firefox",
+              "projectName": "Firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[\n  { column_name: \u001b[32m'year'\u001b[39m, is_nullable: \u001b[32m'YES'\u001b[39m },\n  { column_name: \u001b[32m'brand'\u001b[39m, is_nullable: \u001b[32m'YES'\u001b[39m },\n  { column_name: \u001b[32m'model'\u001b[39m, is_nullable: \u001b[32m'YES'\u001b[39m }\n]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-02-02T09:11:03.868Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1592776949fb2fc4a7c7-d3907f02605cc17a5701",
+          "file": "src/tests/example.test.ts",
+          "line": 211,
+          "column": 5
+        },
+        {
+          "title": "Test Case 12: Schema Testing to Check column keys in a table ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Firefox",
+              "projectName": "Firefox",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 12,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "=========== Tests stoped ===========\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "column \"column_key\" does not exist\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2024-02-02T09:11:03.882Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1592776949fb2fc4a7c7-59652eb907a375166fd6",
+          "file": "src/tests/example.test.ts",
+          "line": 225,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "tests\\example.test.ts",
+      "file": "tests/example.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Test Case 01: Validate select query from DB",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Firefox",
+              "projectName": "Firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 33,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "=========== Tests started ===========\n"
+                    },
+                    {
+                      "text": "[\n  { brand: \u001b[32m'Ford'\u001b[39m, model: \u001b[32m'Mustang'\u001b[39m, year: \u001b[33m1964\u001b[39m },\n  { brand: \u001b[32m'xyz'\u001b[39m, model: \u001b[32m'abc'\u001b[39m, year: \u001b[33m2020\u001b[39m }\n]\n"
+                    },
+                    {
+                      "text": "Data exported to data.json successfully!\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-02-02T09:11:03.492Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ef45e6fd775f0ee539-ff04e9e3cee7a65fa967",
+          "file": "tests/example.test.ts",
+          "line": 36,
           "column": 5
         },
         {
@@ -117,9 +351,9 @@
               "projectName": "Firefox",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 1,
                   "status": "passed",
-                  "duration": 28,
+                  "duration": 63,
                   "errors": [],
                   "stdout": [
                     {
@@ -128,16 +362,16 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-01-30T10:39:53.219Z",
+                  "startTime": "2024-02-02T09:11:03.619Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "1592776949fb2fc4a7c7-4edaf5de742bdbca050b",
-          "file": "src/tests/example.test.ts",
-          "line": 174,
+          "id": "a6ef45e6fd775f0ee539-1c1c6a63814c7c3e8b4f",
+          "file": "tests/example.test.ts",
+          "line": 171,
           "column": 5
         },
         {
@@ -153,9 +387,9 @@
               "projectName": "Firefox",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 1,
                   "status": "passed",
-                  "duration": 7,
+                  "duration": 15,
                   "errors": [],
                   "stdout": [
                     {
@@ -167,16 +401,16 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-01-30T10:39:53.248Z",
+                  "startTime": "2024-02-02T09:11:03.684Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "1592776949fb2fc4a7c7-d1dc770c3a5e7b58bbd9",
-          "file": "src/tests/example.test.ts",
-          "line": 187,
+          "id": "a6ef45e6fd775f0ee539-dd63688680b47b53efb8",
+          "file": "tests/example.test.ts",
+          "line": 184,
           "column": 5
         }
       ]
@@ -184,9 +418,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-01-30T10:39:52.377Z",
-    "duration": 906.9200000000001,
-    "expected": 3,
+    "startTime": "2024-02-02T09:11:02.395Z",
+    "duration": 1553.4399999999998,
+    "expected": 9,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

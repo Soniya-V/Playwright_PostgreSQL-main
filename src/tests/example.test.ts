@@ -3,7 +3,7 @@ import { Client } from "pg";
 import * as dotenv from 'dotenv'
 import fs from 'fs';
 import { JsonOperations } from '../utility/jsonOperations';
-//import { exec } from 'child_process';
+
 dotenv.config()
 let jsonUtil = new JsonOperations()
 
@@ -52,23 +52,14 @@ test('Test Case 01: Validate select query from DB', async () => {
         const queryResult = await client.query(query);
         const data = await fetchData(query)
         console.log(queryResult.rows);
-        await jsonUtil.writeDataToJsonFile('overallData.json',data);
+        await jsonUtil.appendJsonData('overallData.json',data);
     } catch (err) {
         console.error(err.message);
         throw err;
     }
 });
-
-  function writeDataToJson(data: any[]): void {
-    try {
-        const jsonData = JSON.stringify(data, null, 2);
-        fs.writeFileSync('data.json', jsonData);
-        console.log('Data exported to data.json successfully!');
-    } catch (error) {
-        console.error('Error writing data to JSON file:', error.message);
-    }
-  }
   
+
 
 
 // test('Test Case 02: Insert INTO cars', async () => {
@@ -169,30 +160,77 @@ test('Test Case 01: Validate select query from DB', async () => {
 //     }
 // });
 
+// To check number of columns
 
-
-test('Test Case 08: Schema Testing for the Column ', async () => {
+test('Test Case 08: Schema Testing for Number of Column ', async () => {
 
     const query = `SELECT count(*) As NumberofColumns FROM information_schema.columns WHERE table_name = 'cars'`;
 
     try {
         const queryResult = await client.query(query);
+        const data = await fetchData(query)
         console.log(queryResult.rows);
+        await jsonUtil.writeDataToJsonFile('SchemaTest1.json',data);
+    } catch (err) {
+        console.error(err.message);
+        throw err;
+    }
+});
+// To check column name
+test('Test Case 09: Schema Testing for the Column_name ', async () => {
+
+    const query = `SELECT column_name FROM information_schema.columns WHERE table_name = 'cars'`;
+
+    try {
+        const queryResult = await client.query(query);
+        const data = await fetchData(query)
+        console.log(queryResult.rows);
+        await jsonUtil.writeDataToJsonFile('SchemaTest2.json',data);
+    } catch (err) {
+        console.error(err.message);
+        throw err;
+    }
+});
+// Check Column name along with datatype datatype 
+test('Test Case 10: Schema Testing for the Column_name with data type ', async () => {
+
+    const query = `SELECT column_name, data_type FROM information_schema.columns WHERE table_name = 'cars'`;
+
+    try {
+        const queryResult = await client.query(query);
+        const data = await fetchData(query)
+        console.log(queryResult.rows);
+        await jsonUtil.writeDataToJsonFile('SchemaTest3.json',data);
     } catch (err) {
         console.error(err.message);
         throw err;
     }
 });
 
-test('Test Case 08: Schema Testing for for the Column_name ', async () => {
+//Check nulls fields in a table 
+test('Test Case 11: Schema Testing to check null field ', async () => {
 
-    const query = `SELECT column_name FROM information_schema.columns WHERE table_name = 'cars'`;
+    const query = `SELECT column_name, is_nullable FROM information_schema.columns WHERE table_name = 'cars'`;
 
     try {
         const queryResult = await client.query(query);
-        console.log(queryResult.rows);
+        console.log(queryResult.rows);        
     } catch (err) {
         console.error(err.message);
         throw err;
+    }
+});
+
+// Check column keys in a table 
+test('Test Case 12: Schema Testing to Check column keys in a table ', async () => {
+
+    const query = `SELECT column_name, column_key FROM information_schema.columns WHERE table_name = 'cars'`;
+
+    try {
+        const queryResult = await client.query(query);
+        console.log(queryResult.rows);        
+    } catch (err) {
+        console.error(err.message);
+        
     }
 });
