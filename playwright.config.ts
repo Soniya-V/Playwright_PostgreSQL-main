@@ -12,7 +12,9 @@ const config: PlaywrightTestConfig = {
         },
     ],
 
-    testMatch: ["tests/example.test.ts"],
+    //testMatch: ["tests/dbDataIntegrity.test.ts"],
+    //testMatch: ["tests/dbCrud.test.ts"],
+    testMatch: ["tests/dbCrud.test.ts","tests/dbSchema.test.ts","tests/dbDataIntegrity.test.ts"],
 
     use: {
         headless: true,
